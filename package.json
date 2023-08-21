@@ -6,7 +6,8 @@
     "build": "vite build",
     "lint:js": "eslint src",
     "lint:styles": "stylelint 'src/**/*.{scss,svelte}'",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node build"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.2",
