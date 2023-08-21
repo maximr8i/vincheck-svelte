@@ -25,7 +25,7 @@
           <nav class="menu">
             <ul>
               <li>
-                <a href="/catalog?page=1">
+                <a href="/">
                   <!-- svelte-ignore a11y-missing-attribute -->
                   <a>
                     <button type="button">
