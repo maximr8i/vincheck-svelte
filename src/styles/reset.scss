@@ -117,25 +117,6 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.wrapper {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 200px;
-    height: 50%;
-    transform: translateY(-50%);
-    background-color: #00b1e2;
-    filter: blur(150px);
-    backdrop-filter: blur(-1);
-  }
-}
 
 .container {
   max-width: 1170px;
@@ -143,13 +124,41 @@ a {
   padding: 0 20px;
 }
 
-.background {
-  background: linear-gradient(283.63deg, #f1f3fc 0%, #f7f7fb 100%);
+main{
+  padding: 20px;
 }
 
 @media (width <= 1199px) {
   .container {
     max-width: 960px;
   }
+}
 
+@media (width <= 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  main{
+    padding-top: 60px;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (width <= 540px) {
+  main{
+    padding-top: 70px;
+  }
+}
+
+@media (width <= 430px) {
+  main{
+    padding-top: 100px;
+  }
 }

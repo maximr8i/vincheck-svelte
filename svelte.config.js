@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import adapter from '@sveltejs/adapter-node'
+import adapter from '@sveltejs/adapter-static'
 // eslint-disable-next-line import/no-unresolved
 import { vitePreprocess } from '@sveltejs/kit/vite'
 
