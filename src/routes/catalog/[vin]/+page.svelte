@@ -9,7 +9,6 @@
     modal = !modal
   }
 
-  export const prerender = true
   export let data: PageData
 
   const {

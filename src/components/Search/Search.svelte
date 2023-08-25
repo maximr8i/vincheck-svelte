@@ -1,37 +1,37 @@
 <script lang='ts'>
-    import { goto } from '$app/navigation'
-import mainBack from '$lib/image/main-back.png'
-import { langText, language } from '../../routes/stores'
+  import { goto } from '$app/navigation'
+  import localization from '$lib/data/localization'
+  import mainBack from '$lib/image/main-back.png'
+  import { language } from '$lib/stores/language'
 
-let vin = ''
-let car
-$: error = ''
-const { errorText: { first, second } } = $langText[$language]
+  let vin = ''
+  let car
+  $: error = ''
+  const { errorText: { first, second } } = localization[$language]
 
-$: button = $langText[$language].mainPage.search.button
-$: placeholder = $langText[$language].mainPage.search.placeholder
-$: subtitle = $langText[$language].mainPage.search.subtitle
-$: title = $langText[$language].mainPage.search.title
+  $: button = localization[$language].mainPage.search.button
+  $: placeholder = localization[$language].mainPage.search.placeholder
+  $: subtitle = localization[$language].mainPage.search.subtitle
+  $: title = localization[$language].mainPage.search.title
 
-async function searchCar() {
-      if (vin.length === 17) {
-        const res = await fetch(`/api/search/${vin}`)
+  async function searchCar() {
+    if (vin.length === 17) {
+      const res = await fetch(`/api/search/${vin}`)
 
-        car = await res.json()
+      car = await res.json()
 
-        if (!car.results.length) {
-          error = first
-        } else {
-          error = ''
+      if (!car.results.length) {
+        error = first
+      } else {
+        error = ''
 
-          goto(`catalog/${car.results[0].vin}`)
-        }
+        goto(`catalog/${car.results[0].vin}`)
       }
-      if (vin.length < 17 || vin.length > 17) {
-        error = second
-      }
-}
-
+    }
+    if (vin.length < 17 || vin.length > 17) {
+      error = second
+    }
+  }
 </script>
 
 <section class="main">

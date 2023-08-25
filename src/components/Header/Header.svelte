@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { langText, language } from '../../routes/stores'
+  import localization from '$lib/data/localization'
+  import { language } from '$lib/stores/language'
   import Logo from '../icons/Logo/Logo.svelte'
   import Telegram from '../icons/Telegram/Telegram.svelte'
   import Whatsapp from '../icons/Whatsapp/Whatsapp.svelte'
 
-  $: title = $langText[$language].header.title
+  $: title = localization[$language].header.title
 
   function setEn() {
     language.set('en')

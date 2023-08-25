@@ -1,7 +1,4 @@
-/* eslint-disable import/no-unresolved */
-import { readable, writable } from 'svelte/store'
-
-export const langText = readable({
+export default {
   ru: {
     mainPage: {
       search: {
@@ -124,6 +121,4 @@ export const langText = readable({
       second: 'Oops, you may have made a mistake. Vin must contain 17 characters!'
     }
   }
-})
-
-export const language = writable('ru')
+}

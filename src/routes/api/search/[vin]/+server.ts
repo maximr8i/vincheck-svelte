@@ -7,7 +7,5 @@ export const GET: RequestHandler = async ({ params: { vin } }) => {
 
   const data = await response.json()
 
-  console.log(data)
-
   return new Response(JSON.stringify(data))
 }

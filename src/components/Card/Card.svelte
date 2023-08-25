@@ -1,22 +1,23 @@
 <script lang="ts">
-  import { langText, language } from '../../routes/stores'
+  import localization from '$lib/data/localization'
+  import { language } from '$lib/stores/language'
 
-  export let photos
-  export let year
-  export let brand
-  export let model
-  export let vin
-  export let odometer
-  export let engine
-  export let gearbox
-  export let drive_train
-  export let auction_date
-  export let sale_type
-  export let damage
-  export let handleImage
+  export let photos: string[]
+  export let year: string
+  export let brand: string
+  export let model: string
+  export let vin: string
+  export let odometer: string
+  export let engine: string
+  export let gearbox: string
+  export let drive_train: string
+  export let auction_date: string
+  export let sale_type: string
+  export let damage: string
+  export let handleImage: () => boolean
 
-  $: carDetail = $langText[$language].cardPage.carDetail
-  $: sellDetail = $langText[$language].cardPage.sellDetail
+  $: carDetail = localization[$language].cardPage.carDetail
+  $: sellDetail = localization[$language].cardPage.sellDetail
 
   if (photos[0].includes('.JPG') || photos[0].includes('.jpg')) {
     photos = photos.filter((photo) => photo.endsWith('.JPG') || photo.endsWith('.jpg'))

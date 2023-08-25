@@ -1,16 +1,16 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
-  import { DarkPaginationNav, paginate } from 'svelte-paginate'
+  import { DarkPaginationNav } from 'svelte-paginate'
+  import localization from '$lib/data/localization'
+  import { language } from '$lib/stores/language'
   import type { PageData } from './$types'
-  import { langText, language } from '../stores'
 
-  export const prerender = true
   export let data: PageData
 
   let currentPage = data.page
-  $: title = $langText[$language].catalogPage.title
-  $: subtitle = $langText[$language].catalogPage.subtitle
 
+  $: title = localization[$language].catalogPage.title
+  $: subtitle = localization[$language].catalogPage.subtitle
 </script>
 
 <section class="catalogue">

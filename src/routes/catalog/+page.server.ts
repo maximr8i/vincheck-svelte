@@ -7,6 +7,8 @@ type CarList = {
   results: Record<string, unknown>[]
 }
 
+export const prerender = false
+
 export const load = (async ({ fetch, url }) => {
   const page = url.searchParams.get('page') || 1
 

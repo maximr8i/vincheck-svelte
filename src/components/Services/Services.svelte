@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { langText, language } from '../../routes/stores'
+  import localization from '$lib/data/localization'
+  import { language } from '$lib/stores/language'
   import Calendar from '../icons/Calendar/Calendar.svelte'
   import Car from '../icons/Car/Car.svelte'
   import Locatiton from '../icons/Locatiton/Locatiton.svelte'
 
-  $: title = $langText[$language].mainPage.services.title
-  $: subtitle = $langText[$language].mainPage.services.subtitle
-  $: items = $langText[$language].mainPage.services.items
+  $: title = localization[$language].mainPage.services.title
+  $: subtitle = localization[$language].mainPage.services.subtitle
+  $: items = localization[$language].mainPage.services.items
 
 </script>
 

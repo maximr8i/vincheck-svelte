@@ -1,14 +1,15 @@
 <script lang="ts">
+  import localization from '$lib/data/localization'
   import bmw from '$lib/image/bmw.png'
-  import { langText, language } from '../../routes/stores'
+  import { language } from '$lib/stores/language'
   import Message from '../icons/Message/Message.svelte'
   import Profile from '../icons/Profile/Profile.svelte'
   import Time from '../icons/Time/Time.svelte'
   import Wallet from '../icons/Wallet/Wallet.svelte'
 
-  $: title = $langText[$language].mainPage.advantage.title
-  $: subtitle = $langText[$language].mainPage.advantage.subtitle
-  $: items = $langText[$language].mainPage.advantage.items
+  $: title = localization[$language].mainPage.advantage.title
+  $: subtitle = localization[$language].mainPage.advantage.subtitle
+  $: items = localization[$language].mainPage.advantage.items
 
 </script>
 

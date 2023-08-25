@@ -1,8 +1,7 @@
 <script lang="ts">
-  export let photos
-  export let vin
-  export let modal
-  export let handleImage
+  export let photos: string[]
+  export let vin: string
+  export let handleImage: () => boolean
 </script>
 
 <div class="popup">
