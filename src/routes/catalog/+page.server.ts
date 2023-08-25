@@ -4,7 +4,12 @@ type CarList = {
   count: number,
   next: string | null,
   previous: string | null,
-  results: Record<string, unknown>[]
+  results: {
+    vin: string,
+    photo: string[],
+    brand: string,
+    model: string
+  }[]
 }
 
 export const prerender = false

@@ -36,9 +36,9 @@
       odometer={odometer}
       engine={engine}
       gearbox={gearbox}
-      drive_train={drive_train}
-      auction_date={auction_date}
-      sale_type={sale_type}
+      driveTrain={drive_train}
+      auctionDate={auction_date}
+      saleType={sale_type}
       damage={damage}
       handleImage={handleImage}
     />

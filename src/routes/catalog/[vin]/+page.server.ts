@@ -4,7 +4,21 @@ type Car = {
   count: number,
   next: string | null,
   previous: string | null,
-  results: Record<string, unknown>[]
+  results: {
+    vin: string,
+    photo: string[],
+    brand: string,
+    model: string,
+    auction_date: string,
+    damage: string,
+    drive: string,
+    drive_train: string,
+    engine: string,
+    gearbox: string,
+    odometer: string,
+    sale_type: string,
+    year: string
+  }[]
 }
 
 export const prerender = false

@@ -145,6 +145,8 @@
 
 @media (width <= 992px) {
   .catalogue {
+    padding: 25px;
+
     .title {
       font-size: 32px;
     }
