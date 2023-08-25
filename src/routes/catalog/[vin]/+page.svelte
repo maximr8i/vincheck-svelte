@@ -12,8 +12,8 @@
   export let data: PageData
 
   const {
-    auction_date, brand, damage, drive, drive_train, engine, gearbox,
-    model, odometer, photo, sale_type, vin, year
+    auction_date: auctionDate, brand, damage, drive_train: driveTrain, engine, gearbox,
+    model, odometer, photo, sale_type: saleType, vin, year
   } = data.results[0]
 </script>
 
@@ -36,9 +36,9 @@
       odometer={odometer}
       engine={engine}
       gearbox={gearbox}
-      driveTrain={drive_train}
-      auctionDate={auction_date}
-      saleType={sale_type}
+      driveTrain={driveTrain}
+      auctionDate={auctionDate}
+      saleType={saleType}
       damage={damage}
       handleImage={handleImage}
     />

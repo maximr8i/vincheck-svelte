@@ -14,7 +14,7 @@
   export let auctionDate: string
   export let saleType: string
   export let damage: string
-  export let handleImage: () => boolean
+  export let handleImage: () => void
 
   $: carDetail = localization[$language].cardPage.carDetail
   $: sellDetail = localization[$language].cardPage.sellDetail
@@ -35,7 +35,7 @@
     {#each photos as img}
     <button type="button" on:click={handleImage}>
       <img src={img} alt={vin} title={`${vin} ${brand} ${model} ${year} ${gearbox}`} />
-      <span itemScope="" itemType="http://schema.org/ImageObject">
+      <span itemScope itemType="http://schema.org/ImageObject">
         <meta itemProp="name" content={`Automobile ${brand} ${model} vin: ${vin} with damage ${damage}. At the time of sale, the mileage was ${odometer} (Actual)`} />
         <meta itemProp="description" content={`Automobile ${brand} ${model} vin: ${vin} with damage ${damage}. At the time of sale, the mileage was ${odometer} (Actual)`} />
         <link itemProp="contentUrl" href={img} />

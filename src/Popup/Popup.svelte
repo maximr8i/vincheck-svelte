@@ -1,7 +1,7 @@
 <script lang="ts">
   export let photos: string[]
   export let vin: string
-  export let handleImage: () => boolean
+  export let handleImage: () => void
 </script>
 
 <div class="popup">
