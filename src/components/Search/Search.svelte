@@ -183,23 +183,6 @@
   }
 }
 
-.cardLink {
-  position: relative;
-  z-index: 2;
-  align-self: flex-start;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 8px;
-  background: #fff;
-
-  &:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
-}
-
 .card {
   display: flex;
   position: relative;
@@ -263,19 +246,12 @@
     right: inherit;
     bottom: 0;
     width: 100%;
-    height: 300px;
+    height: 200px;
     transform: initial;
 
     img {
       object-fit: contain;
     }
-  }
-
-  .cardLink {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    padding: 10px;
   }
 
   .card {
@@ -306,11 +282,6 @@
 }
 
 @media (width <= 768px) {
-  .cardLink {
-    max-width: 400px;
-    height: 250px;
-  }
-
   .search__wrap {
     align-items: center;
     justify-content: initial;
