@@ -1,7 +1,7 @@
 <script lang='ts'>
   import { goto } from '$app/navigation'
   import localization from '$lib/data/localization'
-  import mainBack from '$lib/image/main-back.png'
+  import mainBack from '$lib/image/main-back.webp'
   import { language } from '$lib/stores/language'
 
   let vin = ''

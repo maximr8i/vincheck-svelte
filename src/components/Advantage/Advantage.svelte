@@ -1,6 +1,6 @@
 <script lang="ts">
   import localization from '$lib/data/localization'
-  import bmw from '$lib/image/bmw.png'
+  import bmw from '$lib/image/bmw.webp'
   import { language } from '$lib/stores/language'
   import Message from '../icons/Message/Message.svelte'
   import Profile from '../icons/Profile/Profile.svelte'
