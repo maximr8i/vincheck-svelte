@@ -10,9 +10,9 @@
   export let odometer: string
   export let engine: string
   export let gearbox: string
-  export let drive_train: string
-  export let auction_date: string
-  export let sale_type: string
+  export let driveTrain: string
+  export let auctionDate: string
+  export let saleType: string
   export let damage: string
   export let handleImage: () => boolean
 
@@ -95,7 +95,7 @@
           {carDetail.drive}
         </span>
         <span>
-          {drive_train}
+          {driveTrain}
         </span>
       </li>
     </ul>
@@ -108,7 +108,7 @@
           {sellDetail.auction}
         </span>
         <span>
-          {auction_date}
+          {auctionDate}
         </span>
       </li>
       <li>
@@ -116,7 +116,7 @@
           {sellDetail.sale}
         </span>
         <span>
-          {sale_type}
+          {saleType}
         </span>
       </li>
       <li>
@@ -231,39 +231,39 @@
         }
 
         .check {
-          background: url("/icons/check.svg");
+          background: url("../../lib/icons/check.svg");
         }
 
         .year {
-          background: url("/icons/calendar.svg");
+          background: url("../../lib/icons/calendar.svg");
         }
 
         .odometer {
-          background: url("/icons/odometer.svg");
+          background: url("../../lib/icons/odometer.svg");
         }
 
         .engine {
-          background: url("/icons/engine.svg");
+          background: url("../../lib/icons/engine.svg");
         }
 
         .gearbox {
-          background: url("/icons/gearbox.svg");
+          background: url("../../lib/icons/gearbox.svg");
         }
 
         .drive {
-          background: url("/icons/car.svg");
+          background: url("../../lib/icons/car.svg");
         }
 
         .auction {
-          background: url("/icons/date.svg");
+          background: url("../../lib/icons/date.svg");
         }
 
         .sale {
-          background: url("/icons/auction.svg");
+          background: url("../../lib/icons/auction.svg");
         }
 
         .damage {
-          background: url("/icons/damage.svg");
+          background: url("../../lib/icons/damage.svg");
         }
       }
     }
