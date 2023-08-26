@@ -17,11 +17,9 @@
       <h3 class="subtitle">
         {subtitle}
       </h3>
-      <a>
         <h2 class="title">
           {title}
         </h2>
-      </a>
       <div class="services__items">
         <div class="item">
           <div class="image">
