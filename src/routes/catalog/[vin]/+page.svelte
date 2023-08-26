@@ -3,7 +3,7 @@
   import Popup from '../../../Popup/Popup.svelte'
   import Card from '../../../components/Card/Card.svelte'
 
-  let modal = false
+  let modal: boolean = false
 
   function handleImage() {
     modal = !modal
@@ -17,13 +17,47 @@
   } = data.results[0]
 </script>
 
+<svelte:head>
+  <meta name="robots" content="index" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <title>{`${vin} ${brand} ${model} бесплатная история автомобиля`}</title>
+  <meta
+    name="description"
+    content={`${vin} vin ${brand} ${model} с повреждениями ${damage}. На момент продажи пробег был ${odometer} (Actual)`}
+  />
+  <meta
+    name="keywords"
+    content={` ${brand}, automobile, insurance, auction, copart, free, info, vin, ${vin}, usa, america, damage, photo`}
+  />
+  <meta content={`${vin} vin ${brand} ${model}`} data-page-subject="true" name="twitter:title" />
+  <meta
+    content={`${vin} vin ${brand} ${model} с повреждениями ${damage}. На момент продажи пробег был ${odometer} (Actual)`}
+    data-page-subject="true"
+    name="twitter:description"
+  />
+  <meta content="@vincheck" data-page-subject="true" name="twitter:site" />
+  <meta content="vincheck" data-page-subject="true" name="twitter:via" />
+  <meta content={`https://vincheck.by/catalog/${vin}`} data-page-subject="true" name="twitter:url" />
+  <meta content="@vincheck" data-page-subject="true" name="twitter:creator" />
+  <meta content="photo" data-page-subject="true" name="twitter:" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={`${vin} ${brand} ${model} бесплатная история автомобиля`} />
+  <meta
+    property="og:description"
+    content={`${vin} vin ${brand} ${model} с повреждениями ${damage}. На момент продажи пробег был ${odometer} (Actual)`}
+  />
+  <link rel="canonical" href={`https://vincheck.by/catalog/${vin}`} />
+  <meta content={photo[0]} data-page-subject="true" name="twitter:image" />
+  <meta property="og:image" content={photo[0]} />
+  <link rel="shortcut icon" href="./favicon.ico" />
+</svelte:head>
+
 <section>
   <div class="container">
     {#if modal}
     <Popup
     photos={photo}
     vin={vin}
-    modal={modal}
     handleImage={handleImage}
       />
     {/if}

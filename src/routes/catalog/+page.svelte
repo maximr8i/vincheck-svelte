@@ -13,6 +13,28 @@
   $: subtitle = localization[$language].catalogPage.subtitle
 </script>
 
+<svelte:head>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <title>
+    Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI.
+  </title>
+  <meta name="description" content="Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI." />
+  <meta content="Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI." data-page-subject="true" name="twitter:title" />
+  <meta content="Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI." data-page-subject="true" name="twitter:description" />
+  <meta content="@vincheck" data-page-subject="true" name="twitter:site" />
+  <meta content="vincheck" data-page-subject="true" name="twitter:via" />
+  <meta content="https://vincheck.by/catalog" data-page-subject="true" name="twitter:url" />
+  <meta content="@vincheck" data-page-subject="true" name="twitter:creator" />
+  <meta content="photo" data-page-subject="true" name="twitter:card" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI" />
+  <meta property="og:description" content="Бесплатная история торгов на аукционах Copart и Insurance Auto Auctions IAAI." />
+  <link rel="canonical" href="https://vincheck.by/catalog?page=1" />
+  <meta content="https://vincheck.by/favicon.ico" data-page-subject="true" name="twitter:image" />
+  <meta property="og:image" content="https://vincheck.by/favicon.ico" />
+  <link rel="shortcut icon" href="./favicon.ico" />
+</svelte:head>
+
 <section class="catalogue">
   <div class="container">
     <h1 class="title">{title}<span>{subtitle}</span></h1>
