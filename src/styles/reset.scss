@@ -117,6 +117,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+#app{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 
 .container {
   max-width: 1170px;
@@ -125,6 +131,7 @@ a {
 }
 
 main{
+  flex: 1 1 auto;
   padding-top: 20px;
 }
 
