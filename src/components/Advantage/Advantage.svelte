@@ -69,17 +69,17 @@
   .advantage__wrapper {
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 200px;
-    height: 75%;
-    background-color: #fff;
-    filter: blur(150px);
-    backdrop-filter: blur(-1);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 200px;
+  //   height: 75%;
+  //   background-color: #fff;
+  //   filter: blur(150px);
+  //   backdrop-filter: blur(-1);
+  // }
 }
 
 .advantage {
@@ -261,6 +261,12 @@
     li:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+@media (width <= 768px){
+  .image {
+    display: none;
   }
 }
 

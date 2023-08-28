@@ -74,12 +74,15 @@
 }
 
 .image {
-  position: absolute;
-  z-index: 1;
-  right: -15%;
-  bottom: 50%;
-  width: 60%;
-  transform: translateY(50%);
+  flex-basis: 50%;
+  order: 1;
+
+  // position: absolute;
+  // z-index: 1;
+  // right: -15%;
+  // bottom: 50%;
+  // width: 60%;
+  // transform: translateY(50%);
 
   img {
     width: 100%;
@@ -91,7 +94,7 @@
 .search {
   position: relative;
   z-index: 2;
-  flex-basis: 60%;
+  flex-basis: 50%;
   flex-shrink: 0;
 
   h1 {
@@ -245,11 +248,13 @@
     position: relative;
     right: inherit;
     bottom: 0;
+    order: 0;
     width: 100%;
-    height: 200px;
+    height: 300px;
     transform: initial;
 
     img {
+      height: 250px;
       object-fit: contain;
     }
   }
@@ -285,7 +290,11 @@
   .search__wrap {
     align-items: center;
     justify-content: initial;
-    padding: 25px 0;
+    padding: 30px 0 50px;
+
+    .image{
+      display: none;
+    }
   }
 
   .search {

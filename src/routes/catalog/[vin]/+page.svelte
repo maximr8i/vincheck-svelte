@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types'
-  import Popup from '../../../Popup/Popup.svelte'
   import Card from '../../../components/Card/Card.svelte'
+  import Popup from '../../../components/Popup/Popup.svelte'
 
   let modal: boolean = false
 
