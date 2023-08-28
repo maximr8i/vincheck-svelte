@@ -2733,6 +2733,11 @@ svelte-hmr@^0.15.3:
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.3.tgz#df54ccde9be3f091bf5f18fc4ef7b8eb6405fbe6"
   integrity sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==
 
+svelte-lazy-image@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/svelte-lazy-image/-/svelte-lazy-image-0.5.1.tgz#20b14c0736a51a30f5607865d5e2310c60ffd4be"
+  integrity sha512-BDwywMngYjrEtL73N2ZKYYnWlNBWSnw31y1Mb3kNeXVc/9iDir6Ew3bfuDtuEyi3evBFXF0jixkCMFuTseWjWQ==
+
 svelte-paginate@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/svelte-paginate/-/svelte-paginate-0.1.0.tgz#738ebdeb3720a89ba738c54094a39ffc09b2b9b3"

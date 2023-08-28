@@ -1,5 +1,6 @@
 <script lang='ts'>
   import { goto } from '$app/navigation'
+  import { useLazyImage as lazyImage } from 'svelte-lazy-image'
   import localization from '$lib/data/localization'
   import mainBack from '$lib/image/main-back.webp'
   import { language } from '$lib/stores/language'
@@ -38,7 +39,7 @@
   <div class="container">
     <div class="search__wrap">
       <div class="image">
-        <img src={mainBack} alt="background" />
+        <img data-src={mainBack} src={mainBack} alt="background" use:lazyImage />
       </div>
       <div class="search">
         <h1>{title[0]}<span>VIN</span>{title[1]}</h1>
@@ -76,13 +77,6 @@
 .image {
   flex-basis: 50%;
   order: 1;
-
-  // position: absolute;
-  // z-index: 1;
-  // right: -15%;
-  // bottom: 50%;
-  // width: 60%;
-  // transform: translateY(50%);
 
   img {
     width: 100%;

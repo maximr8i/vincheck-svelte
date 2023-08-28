@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { useLazyImage as lazyImage } from 'svelte-lazy-image'
   import localization from '$lib/data/localization'
   import bmw from '$lib/image/bmw.webp'
   import { language } from '$lib/stores/language'
@@ -17,7 +18,7 @@
   <div class="container">
     <div class="advantage">
       <div class="image">
-        <img src={bmw} alt="BMW" />
+        <img data-src={bmw} src={bmw} alt="BMW" use:lazyImage />
       </div>
       <div class="description">
         <h3>{subtitle}</h3>
