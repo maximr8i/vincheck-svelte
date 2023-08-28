@@ -1,4 +1,6 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://vincheck.by/sitemap.xml
+Sitemap: https://vincheck.by/sitemap1.xml
+Sitemap: https://vincheck.by/sitemap2.xml
+Sitemap: https://vincheck.by/sitemap3.xml
