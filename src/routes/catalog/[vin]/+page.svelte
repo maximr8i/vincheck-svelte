@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import type { PageData } from './$types'
   import Card from '../../../components/Card/Card.svelte'
   import Popup from '../../../components/Popup/Popup.svelte'
@@ -15,6 +16,20 @@
     auction_date: auctionDate, brand, damage, drive_train: driveTrain, engine, gearbox,
     model, odometer, photo, sale_type: saleType, vin, year
   } = data.results[0]
+
+  onMount(
+    async () => {
+      const req = await fetch(`http://84.54.47.216/v1/carlist/add_recent/${vin}`, {
+        method: 'POST',
+        body: JSON.stringify({ vin }),
+        headers: {
+          'Content-Type': 'application/json',
+          protection: 'YjWVsPQ6EM!WUaeSsydsPiWHDdp/vbg9JCNefGHltBdddPbb8md0mr=n86hzAyiv'
+        }
+      })
+    }
+  )
+
 </script>
 
 <svelte:head>
