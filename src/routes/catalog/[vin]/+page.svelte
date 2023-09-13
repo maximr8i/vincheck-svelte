@@ -1,20 +1,45 @@
 <script lang="ts">
-  import type { PageData } from './$types'
-  import Card from '../../../components/Card/Card.svelte'
-  import Popup from '../../../components/Popup/Popup.svelte'
+    import { onMount } from 'svelte'
+import type { PageData } from './$types'
+import Card from '../../../components/Card/Card.svelte'
+import Popup from '../../../components/Popup/Popup.svelte'
 
-  let modal: boolean = false
+let modal: boolean = false
 
-  function handleImage() {
-    modal = !modal
-  }
+function handleImage() {
+      modal = !modal
+}
 
-  export let data: PageData
+export let data: PageData
 
-  const {
-    auction_date: auctionDate, brand, damage, drive_train: driveTrain, engine, gearbox,
-    model, odometer, photo, sale_type: saleType, vin, year
-  } = data.results[0]
+const {
+      auction_date: auctionDate, brand, damage, drive_train: driveTrain, engine, gearbox,
+      model, odometer, photo, sale_type: saleType, vin, year
+} = data.results[0]
+
+onMount(
+      async () => {
+        await fetch('/api/recent', {
+          method: 'POST',
+          body: JSON.stringify({ vin }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+      }
+)
+
+onMount(
+      async () => {
+        await fetch('/api/view', {
+          method: 'POST',
+          body: JSON.stringify({ vin }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+      }
+)
 
 </script>
 
